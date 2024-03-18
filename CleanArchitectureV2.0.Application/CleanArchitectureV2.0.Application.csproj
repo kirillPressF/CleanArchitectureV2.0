@@ -14,8 +14,13 @@
   <ItemGroup>
     <Folder Include="Common\Behaviors\" />
     <Folder Include="Common\Exception\" />
-    <Folder Include="Features\UseFeatures\CreateUser\" />
-    <Folder Include="Features\UseFeatures\GetAllUser\" />
+    <Folder Include="Features\UserFeatures\GetAllUser\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
 </Project>
