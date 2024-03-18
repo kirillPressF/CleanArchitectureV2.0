@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureV2.0.Domain\CleanArchitectureV2.0.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Behaviors\" />
+    <Folder Include="Common\Exception\" />
+    <Folder Include="Features\UseFeatures\CreateUser\" />
+    <Folder Include="Features\UseFeatures\GetAllUser\" />
+  </ItemGroup>
+
 </Project>
