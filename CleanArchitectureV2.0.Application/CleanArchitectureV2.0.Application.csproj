@@ -12,8 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Behaviors\" />
-    <Folder Include="Common\Exception\" />
     <Folder Include="Features\UserFeatures\GetAllUser\" />
   </ItemGroup>
 

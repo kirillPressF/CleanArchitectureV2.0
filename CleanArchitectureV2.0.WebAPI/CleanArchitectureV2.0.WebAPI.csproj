@@ -15,7 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\CleanArchitectureV2.0.Application\CleanArchitectureV2.0.Application.csproj" />
+    <ProjectReference Include="..\CleanArchitectureV2.0.Persistence\CleanArchitectureV2.0.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extension\" />
   </ItemGroup>
 
 </Project>
