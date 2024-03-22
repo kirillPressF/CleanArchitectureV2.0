@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using CleanArchitectureV2._0.Application.Features.UseFeatures.CreateUser;
+using CleanArchitectureV2._0.Application.Features.UserFeatures.GetAllUser;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.CompilerServices;
 
@@ -15,11 +17,18 @@ namespace CleanArchitectureV2._0.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<GetAllUserResponse>>>
-        //public async Task<IActionResult> Get([FromQuery] string email, CancellationToken cancellationToken)
-        //{
-        //    var user = await _mediator.Send(new GetUserByEmailQuery(email), cancellationToken);
-        //    return Ok(user);
-        //}
+        public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(CancellationToken cancellationToken)
+        {
+            var response = await _mediator.Send(new GetAllUserRequest(), cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<CreateUserResponse>> Create(CreateUserRequest request,
+            CancellationToken cancellationToken)
+        {
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
     }
 }
